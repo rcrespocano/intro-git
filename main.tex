@@ -52,21 +52,21 @@ https://about.me/rubencrespocano \\
 \begin{frame}
 \frametitle{Sistema de control de versiones centralizado}
 \begin{figure}
-\includegraphics[width=0.50\linewidth]{centralized.png}
+\includegraphics[width=0.50\linewidth]{img/centralized.png}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{Sistema de control de versiones distribuido}
 \begin{figure}
-\includegraphics[width=0.50\linewidth]{distributed.png}
+\includegraphics[width=0.50\linewidth]{img/distributed.png}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{Flujo de trabajo}
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{cuencos.png}
+\includegraphics[width=0.8\linewidth]{img/cuencos.png}
 \end{figure}
 \end{frame}
 
@@ -192,7 +192,7 @@ Cada repositorio local está compuesto por tres \textit{árboles} administrados 
 \end{itemize}
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{trees.png}
+\includegraphics[width=0.8\linewidth]{img/trees.png}
 \end{figure}
 \end{frame}
 
@@ -221,7 +221,7 @@ Tras este proceso los cambios estarán en el \textbf{HEAD}, pero todavía no est
 \begin{frame}
 \frametitle{Flujo de trabajo}
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{cuencos.png}
+\includegraphics[width=0.8\linewidth]{img/cuencos.png}
 \end{figure}
 \end{frame}
 
@@ -273,7 +273,7 @@ git diff <file>
 \begin{frame}
 \frametitle{Cómo sincronizar con un servidor remoto}
 \begin{figure}
-\includegraphics[width=0.95\linewidth]{remote.png}
+\includegraphics[width=0.95\linewidth]{img/remote.png}
 \end{figure}
 \end{frame}
 
@@ -396,6 +396,141 @@ Antes de ejecutar ese comando se recomienda comparar los cambios. Para ello, eje
 git diff <source-branch> <target-branch>
 \end{verbatim}
 \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ramas: Manejo básico}
+\begin{figure}
+\includegraphics[width=0.85\linewidth]{img/branching-0.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ramas: Manejo básico}
+\begin{figure}
+\includegraphics[width=0.85\linewidth]{img/branching-1.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Ramas: Manejo básico}
+\begin{figure}
+\includegraphics[width=0.85\linewidth]{img/branching-2.png}
+\end{figure}
+\vskip 0.50cm
+\footnotesize
+\begin{block}{Comando(s)}
+\begin{verbatim}
+git branch iss53
+git checkout iss53
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Ramas: Manejo básico}
+\begin{figure}
+\includegraphics[width=0.85\linewidth]{img/branching-3.png}
+\end{figure}
+\vskip 0.50cm
+\footnotesize
+\begin{block}{Comando(s)}
+\begin{verbatim}
+vim index.html
+git commit -a -m 'added a new footer [issue 53]'
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Ramas: Manejo básico}
+\begin{figure}
+\includegraphics[width=0.70\linewidth]{img/branching-4.png}
+\end{figure}
+\vskip 0.10cm
+\scriptsize
+\begin{block}{Comando(s)}
+\begin{verbatim}
+git checkout master
+git branch hotfix
+git checkout hotfix
+vim index.html
+git commit -a -m 'fixed the broken email address'
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Ramas: Manejo básico}
+\begin{figure}
+\includegraphics[width=0.70\linewidth]{img/branching-5.png}
+\end{figure}
+\vskip 0.30cm
+\footnotesize
+\begin{block}{Comando(s)}
+\begin{verbatim}
+git checkout master
+git merge hotfix
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Ramas: Manejo básico}
+\begin{figure}
+\includegraphics[width=0.85\linewidth]{img/branching-6.png}
+\end{figure}
+\vskip 0.30cm
+\footnotesize
+\begin{block}{Comando(s)}
+\begin{verbatim}
+git branch -d hotfix
+---
+git checkout iss53
+vim index.html
+git commit -a -m 'finished the new footer [issue 53]'
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Ramas: Manejo básico}
+\begin{figure}
+\includegraphics[width=0.85\linewidth]{img/branching-7.png}
+\end{figure}
+\vskip 0.30cm
+\footnotesize
+\begin{block}{Comando(s)}
+\begin{verbatim}
+git checkout master
+git merge iss53
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Ramas: Manejo básico}
+\begin{figure}
+\includegraphics[width=0.85\linewidth]{img/branching-8.png}
+\end{figure}
+\vskip 0.30cm
+\footnotesize
+\begin{block}{Comando(s)}
+\begin{verbatim}
+git checkout master
+git merge iss53
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ramas: Flujo de trabajo}
+\begin{figure}
+\includegraphics[width=0.90\linewidth]{img/branching-9.png}
+\end{figure}
+\begin{figure}
+\includegraphics[width=0.90\linewidth]{img/branching-10.png}
+\end{figure}
 \end{frame}
 
 \begin{frame}
