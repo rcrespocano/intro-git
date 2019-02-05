@@ -44,9 +44,27 @@ https://about.me/rubencrespocano \\
 \begin{itemize}
 \item Sistema de control de versiones (VCS)
 \item Sistema distribuido
-\item Creado por Linus Torvalds para Linux
+\item Creado por Linus Torvalds para Linux (2005)
 \item Interfaz de línea de comandos (aunque también existen interfaces gráficas)
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sobre control de versiones}
+Un sistema de control de versiones registra y almacena cambios en ficheros a lo largo del tiempo para mejorar la gestión y poder recuperar versiones específicas en cualquier momento.
+\vskip 0.50cm
+\begin{itemize}
+\item Sistema de control de versiones local
+\item Sistema de control de versiones centralizado
+\item Sistema de control de versiones distribuido
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sistema de control de versiones local}
+\begin{figure}
+\includegraphics[width=0.50\linewidth]{img/local.png}
+\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -57,10 +75,52 @@ https://about.me/rubencrespocano \\
 \end{frame}
 
 \begin{frame}
+\frametitle{Sistema de control de versiones centralizado}
+\begin{itemize}
+\item Un servidor centralizado contiene todos los ficheros versionados y los metadatos.
+\item Ventajas: colaboración, administración y sencillez
+\item Inconvenientes: centralización, disponibilidad, copias de seguridad, velocidad, etc.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \frametitle{Sistema de control de versiones distribuido}
 \begin{figure}
 \includegraphics[width=0.50\linewidth]{img/distributed.png}
 \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sistema de control de versiones distribuido}
+\begin{itemize}
+\item Cada cliente tiene una réplica exacta del repositorio (ficheros, metadatos, historial, etc.)
+\item Si el servidor muere cualquier copia puede reemplazar al servidor central
+\item Colaboración con distintos grupos de forma descentralizada
+\item Ventajas
+\begin{itemize}
+\item Velocidad
+\item Diseño simple
+\item Soporte para desarrollo no lineal (cientos de ramas paralelas)
+\item Totalmente distribuido
+\item Capaz de gestionar grandes proyectos de forma eficiente (velocidad y tamaño de datos)
+\end{itemize}
+\item Inconvenientes: curva aprendizaje
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{¿Quién utiliza git?}
+\begin{figure}
+\includegraphics[width=0.95\linewidth]{img/who.png}
+\end{figure}
+\vskip 0.5cm
+\small
+Microsoft, Amazon, LinkedIn, Cisco, IBM, Accenture, Facebook, Yahoo, Apple, T-Mobile, Lenovo, Atlassian, y muchas otras.
+\small
+\begin{itemize}
+\item https://git-scm.com/
+\item https://www.quora.com/What-companies-use-Git
+\end{itemize}
 \end{frame}
 
 \begin{frame}
