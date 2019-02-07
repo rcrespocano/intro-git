@@ -46,6 +46,10 @@
 \item Creado por Linus Torvalds para Linux (2005)
 \item Interfaz de línea de comandos (aunque también existen interfaces gráficas)
 \end{itemize}
+\vskip 0.25cm
+\begin{figure}
+\includegraphics[width=0.50\linewidth]{img/gitlogo.png}
+\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -312,6 +316,16 @@ git mv <file>
 \end{frame}
 
 \begin{frame}[fragile]
+\frametitle{Deshacer cambios en un archivo}
+Para recuperar la versión del HEAD, ejecuta el siguiente comando:
+\begin{block}{Comando}
+\begin{verbatim}
+git checkout -- <file>
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
 \frametitle{Cómo conocer el estado actual}
 Para conocer el estado actual del repositorio, ejecuta el siguiente comando:
 \begin{block}{Comando}
@@ -327,6 +341,23 @@ git diff
 git diff <file>
 \end{verbatim}
 \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Historial}
+Para mostrar el historial de todos los cambios efectuados, ejecuta el siguiente comando:
+\begin{block}{Comando}
+\begin{verbatim}
+git log [-N]
+\end{verbatim}
+\end{block}
+\vskip 0.50cm
+Otros Parámetros:
+\begin{itemize}
+\item --oneline
+\item --graph
+\item -p
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -395,6 +426,24 @@ Para crear una etiqueta con una anotación, ejecuta el siguiente comando:
 \begin{block}{Comando}
 \begin{verbatim}
 git tag -a v0.0.2 -m ``New software version.''
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Archivo .gitignore}
+A menudo, hay archivos que no se desean que sean añadidos al repositorio: passwords, temporales, binarios compilados, archivos de configuración local, etc.
+\begin{itemize}
+\item Git permite utilizar archivos en los que se indica qué archivos debe ignorar
+\item Archivo: \textbf{.gitignore}
+\item Uso de expresiones regulares y comentarios
+\end{itemize}
+\vskip 0.50cm
+\begin{block}{Ejemplo}
+\begin{verbatim}
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
 \end{verbatim}
 \end{block}
 \end{frame}
